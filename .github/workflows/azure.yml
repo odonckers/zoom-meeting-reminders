@@ -21,8 +21,8 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: PremeetingReminders    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '10.x'                # set this to the node version to use
+  AZURE_WEBAPP_PACKAGE_PATH: '.'            # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: '14.x'                      # set this to the node version to use
 
 jobs:
   build-and-deploy:
@@ -31,10 +31,6 @@ jobs:
     environment: production
     steps:
     - uses: actions/checkout@v2
-    # - name: Azure Login
-    # - uses: azure/login@v1
-    #   with:
-    #     creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v1
       with:
