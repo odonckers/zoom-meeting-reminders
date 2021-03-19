@@ -1,4 +1,4 @@
-name: Upload Website
+name: Deploy Site to S3
 
 on:
   release:
