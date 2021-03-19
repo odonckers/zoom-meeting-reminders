@@ -16,7 +16,7 @@ const App = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React and Azure
+          Learn React and Netlify
         </a>
       </header>
     </div>
