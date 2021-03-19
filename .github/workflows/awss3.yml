@@ -18,11 +18,13 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Build React App
       run: npm install && npm run build
 
     - name: Deploy app build to S3 bucket
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
       run: |
-        aws s3 sync ./build/ s3://premeetingreminders --delete
+        aws s3 sync ./build/ "s3://$AWS_S3_BUCKET" --delete
