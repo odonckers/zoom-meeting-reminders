@@ -1,1 +1,1 @@
-export { OptionsPage } from "./options/OptionsPage"
+export { HomePage } from "./home/HomePage"

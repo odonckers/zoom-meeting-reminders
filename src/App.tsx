@@ -1,16 +1,16 @@
-import React from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { OptionsPage } from "./pages"
+import React, { FunctionComponent } from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { HomePage } from "./pages"
 
-const App = () => {
+const App: FunctionComponent = (props) => {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route path="/">
-          <OptionsPage />
+          <HomePage />
         </Route>
       </Switch>
-    </Router>
+    </BrowserRouter>
   )
 }
 

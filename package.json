@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "@fluentui/react": "^8.5.0",
+    "@fluentui/react-hooks": "^8.1.0",
+    "@fluentui/react-icon-provider": "^1.0.2",
+    "@fluentui/react-icons": "^1.1.111",
+    "@fluentui/react-image": "^0.8.0",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.4",
